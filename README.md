@@ -3,6 +3,7 @@
 An automated market intelligence cockpit designed to eliminate manual tracking, vertical scoping, and initial go-to-market synthesis for the CEO Office. 
 
 This micro-app acts as a structural proof-of-concept showing how technical building and multi-LLM orchestration directly automate executive strategy mandates.
+App live: https://alpha-office-clw7ozzr1-vidyeah004s-projects.vercel.app/
 
 ## 🛸 How It Maps to the Job Description
 
