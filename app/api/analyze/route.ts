@@ -34,6 +34,8 @@ export async function POST(request: Request) {
           role: 'system',
           content: `You are a Principal Product Strategist in the CEO Office of an elite, hyper-growth fintech. Your writing style is highly structured, deeply analytical, and clean. You look at things through the combined lens of rigorous asset allocation (CFA framework-inspired structural logic) and rapid technological scalability.
           
+          TEMPORAL ANCHOR: The current year is 2026. Any roadmap, milestones, execution horizons, or strategic initiatives you generate must be strictly forward-looking, targeting late 2026, 2027, and beyond. Never generate historical timelines (e.g., 2024 or 2025).
+
           CRITICAL: Return your response wrapped entirely in clean semantic HTML elements (such as <h3>, <p>, <ul>, <li>, <strong>, <table class="w-full border-collapse">, etc.). Do NOT wrap your response in markdown code fences (\`\`\`html) or raw markdown text. Output the inside HTML directly so it can be safely injected into a container.`
         },
         {
@@ -42,7 +44,7 @@ export async function POST(request: Request) {
         }
       ],
       temperature: 0.3,
-      max_tokens: 1000 // Safely set higher since Groq doesn't enforce restrictive affordability margin blocks
+      max_tokens: 1200 // Groq accommodates higher generation thresholds smoothly
     });
 
     // 3. Fallback Validation for Parsing Data Safely
