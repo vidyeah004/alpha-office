@@ -1,5 +1,3 @@
-import './globals.css'; // Next.js automatically injects Tailwind via this
-
 export const metadata = {
   title: 'AlphaOffice // CEO Strategic Intelligence Hub',
   description: 'Automated competitive tracking, macro vertical deep-dives, and GTM strategy pipelines.',
