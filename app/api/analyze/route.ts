@@ -22,7 +22,7 @@ export async function POST(request: Request) {
       userPrompt = `Synthesize a 6-Month Go-To-Market (GTM) Expansion Playbook for entering the "${payload.target}" market with an initial product hook of "${payload.hook}". Detail regulatory localization needs, customer acquisition mechanics, and milestones.`;
     }
 
-    // 2. Defensive Network Execution
+    // 2. Defensive Network Execution with max_tokens set
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -33,6 +33,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         model: 'google/gemini-2.5-flash', 
+        max_tokens: 800, // Capping token generation length down to resolve credit margin errors
         messages: [
           {
             role: 'system',
