@@ -101,7 +101,7 @@ export default function Home() {
             rel="noreferrer" 
             className="text-[11px] text-amber-500/70 hover:text-amber-400 transition-colors font-mono tracking-wide block group"
           >
-            → Inspect Shipped Portfolios <span className="inline-block transition-transform duration-200 group-hover:translate-x-0.5"></span>
+            → Inspect Shipped Portfolios
           </a>
         </div>
       </aside>
@@ -196,19 +196,16 @@ export default function Home() {
               </div>
             ) : output ? (
               <div className="max-w-3xl space-y-6 animate-[fadeIn_0.3s_ease-out]">
-                {/* Embedded dynamic styling for beautifully rendering clean typography */}
-                <style jsx global>{`
-                  .prose h3 { font-size: 1rem; font-weight: 600; color: #f4f4f5; margin-top: 1.5rem; margin-bottom: 0.5rem; font-family: ui-mono, monospace; letter-spacing: -0.01em; }
-                  .prose p { font-size: 0.875rem; color: #a1a1aa; line-height: 1.6; margin-bottom: 1rem; }
-                  .prose ul { list-style-type: square; padding-left: 1.25rem; margin-bottom: 1.2rem; color: #d4d4d8; }
-                  .prose li { margin-bottom: 0.4rem; font-size: 0.875rem; }
-                  .prose strong { color: #f59e0b; font-weight: 600; }
-                  .prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.825rem; text-align: left; }
-                  .prose th { border-bottom: 1px solid #27272a; padding: 0.6rem; color: #71717a; font-family: ui-mono, monospace; font-weight: 500; }
-                  .prose td { border-bottom: 1px solid #18181b; padding: 0.6rem; color: #d4d4d8; }
-                `}</style>
                 <div 
-                  className="prose text-zinc-300"
+                  className="text-zinc-300 
+                             [&_h3]:font-mono [&_h3]:text-base [&_h3]:font-semibold [&_h3]:text-zinc-100 [&_h3]:mt-6 [&_h3]:mb-2 [&_h3]:tracking-tight 
+                             [&_p]:text-sm [&_p]:text-zinc-400 [&_p]:leading-relaxed [&_p]:mb-4 
+                             [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-5 [&_ul]:text-zinc-300 
+                             [&_li]:mb-1.5 [&_li]:text-sm 
+                             [&_strong]:text-amber-500 [&_strong]:font-semibold 
+                             [&_table]:w-full [&_table]:border-collapse [&_table]:my-6 [&_table]:text-xs [&_table]:text-left 
+                             [&_th]:border-b [&_th]:border-zinc-800 [&_th]:pb-2 [&_th]:text-zinc-500 [&_th]:font-mono [&_th]:font-medium 
+                             [&_td]:border-b [&_td]:border-zinc-900 [&_td]:py-2.5 [&_td]:text-zinc-300"
                   dangerouslySetInnerHTML={{ __html: output }}
                 />
               </div>
